@@ -1,0 +1,83 @@
+/* ===== LAYOUT PRINCIPAL ===== */
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr; /* Coluna central maior */
+  gap: 24px;
+  padding: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* ===== COLUNA CENTRAL ===== */
+.content {
+  background: #f5f5f5;
+  padding: 24px;
+  border-radius: 12px;
+  min-height: 560px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 60px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  display: grid;
+  gap: 16px;
+  margin-top: 0;
+  /* AUTO-ORGANIZA CARDS */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #e0e0e0;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 60px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e laptops médios */
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr; /* Coluna única */
+  }
+  .sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-top: 24px;
+  }
+}
+
+/* Tablets pequenos e grandes smartphones */
+@media (max-width: 768px) {
+  .sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .sidebar {
+    grid-template-columns: 1fr; /* Cards empilhados verticalmente */
+    gap: 12px;
+  }
+  .content {
+    padding: 16px;
+    min-height: auto;
+  }
+  .main {
+    padding: 16px;
+    gap: 16px;
+  }
+}

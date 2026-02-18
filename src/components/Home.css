@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+  background-color: #418df0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  border-bottom: 1px solid #ddd;
+ 
+}
+
+/* LOGO */
+.home-logo img {
+  height: 45px;
+}
+
+/* MENU CENTRAL */
+.home {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ITENS */
+.home li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.home li:hover {
+  color: #3498db;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .home {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+}
